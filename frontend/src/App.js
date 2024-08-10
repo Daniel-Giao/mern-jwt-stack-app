@@ -1,11 +1,13 @@
 // rrd imports
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// pages import
-import Home from "./pages/Home";
-
 // components import
 import NavBar from './components/Navbar'
+
+// pages import
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -17,6 +19,14 @@ function App() {
             <Route
               path="/"
               element={<Home />}
+            />
+            <Route
+              path="/login"
+              element={<Login />}
+            />
+            <Route
+              path="/signup"
+              element={<Signup />}
             />
           </Routes>
         </div>
