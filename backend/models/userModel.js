@@ -32,7 +32,6 @@ userSchema.statics.signup = async function (email, password) {
     }
 
     const exist = await this.findOne({ email })
-
     if (exist) {
         throw Error('Email already in use')
     }
