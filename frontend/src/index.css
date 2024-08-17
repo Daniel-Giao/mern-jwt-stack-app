@@ -28,7 +28,16 @@ header .container {
 
 header a {
   color: #333;
+  text-align: center;
   text-decoration: none;
+}
+header h1 {
+  margin: 0;
+}
+
+.navbar-logo {
+  max-width: 150px;
+  margin: 0 auto;
 }
 
 .pages {

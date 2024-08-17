@@ -59,6 +59,7 @@ export default function WorkoutForm() {
                 type="text"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
+                placeholder="e.g., Military Press"
                 className={emptyFields.includes('title') ? 'error' : ''}
             />
 
@@ -67,6 +68,7 @@ export default function WorkoutForm() {
                 type="number"
                 onChange={(e) => setLoad(e.target.value)}
                 value={load}
+                placeholder="e.g., 25"
                 className={emptyFields.includes('load') ? 'error' : ''}
             />
 
@@ -75,6 +77,7 @@ export default function WorkoutForm() {
                 type="number"
                 onChange={(e) => setReps(e.target.value)}
                 value={reps}
+                placeholder="e.g., 12"
                 className={emptyFields.includes('reps') ? 'error' : ''}
             />
             <button>Add Workout</button>
