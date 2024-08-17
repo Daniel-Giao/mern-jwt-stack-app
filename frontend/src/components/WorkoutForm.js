@@ -5,6 +5,9 @@ import { useState } from "react"
 import useWorkoutsContext from "../hooks/useWorkoutsContext"
 import useAuthContext from "../hooks/useAuthContext"
 
+//libraries import
+import { toast } from 'react-toastify';
+
 export default function WorkoutForm() {
     const { dispatch } = useWorkoutsContext()
     const { user } = useAuthContext()
@@ -46,6 +49,7 @@ export default function WorkoutForm() {
             setLoad('')
             setEmptyFields([])
             console.log('Added a new workout', json)
+            toast.success(`🏋️‍♂️ Successfully added ${title}!`)
             dispatch({ type: "CREATE_WORKOUT", payload: json })
         }
     }

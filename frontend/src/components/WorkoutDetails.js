@@ -4,6 +4,7 @@ import useWorkoutsContext from "../hooks/useWorkoutsContext"
 
 // libraries import
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import { toast } from 'react-toastify';
 
 export default function WorkoutDetails({ workout }) {
     const { dispatch } = useWorkoutsContext()
@@ -22,6 +23,7 @@ export default function WorkoutDetails({ workout }) {
         const json = await response.json()
 
         if (response.ok) {
+            toast.error(`🗑️ Deleted ${workout.title}!`)
             dispatch({ type: 'DELETE_WORKOUT', payload: json })
         }
     }
